@@ -1,0 +1,36 @@
+= user-consumer
+
+
+[[_overview]]
+== 概览
+
+=== 版本信息
+[%hardbreaks]
+__版本__ : latest
+
+
+=== 联系方式
+[%hardbreaks]
+__名字__ : Wilson
+
+
+=== 许可信息
+[%hardbreaks]
+__许可证__ : Wilson_license
+__许可网址__ : http://blog.csdn.net/z28126308
+__服务条款__ : http://localhost:51001/
+
+
+=== URI scheme
+[%hardbreaks]
+__域名__ : localhost:8080
+__基础路径__ : /
+__方案__ : HTTP, HTTPS
+
+
+=== 标签
+
+* application : Application
+
+
+
