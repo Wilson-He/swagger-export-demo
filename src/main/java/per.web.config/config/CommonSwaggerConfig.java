@@ -29,7 +29,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 @Import(SwaggerProperties.class)
-@ConditionalOnProperty(havingValue = "true",name = "swagger.enable")
+@ConditionalOnProperty(havingValue = "true",name = "swagger.enabled")
 public class CommonSwaggerConfig {
 
   private final static Logger LOGGER = LoggerFactory.getLogger(CommonSwaggerConfig.class);
@@ -39,12 +39,13 @@ public class CommonSwaggerConfig {
 
   @Bean
   public Docket docket() {
+    System.err.println("init swagger:" + swaggerProperties.toString());
     LOGGER.info("init swagger:" + swaggerProperties.toString());
     return new Docket(DocumentationType.SWAGGER_2)
         .groupName(swaggerProperties.getGroupName())
         .host(swaggerProperties.getHost())
         .pathMapping("/")
-        .apiInfo(swaggerProperties.toApiInfo())
+        .apiInfo(swaggerProperties.apiInfo())
         .protocols(Sets.newHashSet("http", "https"))
         .globalResponseMessage(RequestMethod.GET, responseMessageList())
         .globalResponseMessage(RequestMethod.POST, responseMessageList())
