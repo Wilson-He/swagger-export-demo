@@ -44,7 +44,7 @@ import per.web.config.SwaggerConfig;
 @WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
 @AutoConfigureRestDocs(outputDir = "build/asciidoc/snippets")
-@SpringBootTest(classes = {Application.class, SwaggerConfig.class})
+@SpringBootTest(classes = {Application.class})
 @AutoConfigureMockMvc
 public class Swagger2MarkupTest {
 

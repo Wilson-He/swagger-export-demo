@@ -143,6 +143,10 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+    <dependency>
       <groupId>io.github.robwin</groupId>
       <artifactId>assertj-swagger</artifactId>
       <version>0.8.1</version>
