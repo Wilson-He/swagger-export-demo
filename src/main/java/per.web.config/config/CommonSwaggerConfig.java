@@ -6,6 +6,7 @@ import java.util.List;
 import javax.annotation.Resource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -52,7 +53,7 @@ public class CommonSwaggerConfig {
         .globalResponseMessage(RequestMethod.DELETE, responseMessageList())
         .globalResponseMessage(RequestMethod.PUT, responseMessageList())
         .select()
-        .apis(RequestHandlerSelectors.basePackage("com.huaweisoft"))
+        .apis(RequestHandlerSelectors.basePackage(swaggerProperties.getBasePackage()))
         .paths(PathSelectors.any())
         .build();
   }

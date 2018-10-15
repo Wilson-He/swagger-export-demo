@@ -1,5 +1,7 @@
 package per.web.config.model;
 
+import io.swagger.annotations.ApiModelProperty;
+import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.validation.annotation.Validated;
 
@@ -8,10 +10,11 @@ import org.springframework.validation.annotation.Validated;
  * @date: 2018/10/8
  * @since:
  */
-@Validated
 public class UserBase {
   @NotBlank
+  @ApiModelProperty("姓名")
   private String name;
+  @NotNull(message = "密码不能为空")
   private String password;
 
   public String getName() {

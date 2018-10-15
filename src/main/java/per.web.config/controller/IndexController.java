@@ -3,6 +3,8 @@ package per.web.config.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +25,7 @@ public interface IndexController {
 
   @PostMapping("/")
   @ApiOperation("添加method")
+  @ApiResponses({@ApiResponse(code = 200,message = "访问成功")})
   Object add(@Validated @RequestBody UserBase userBase);
 
   @GetMapping("/")

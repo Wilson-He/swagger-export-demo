@@ -39,7 +39,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import per.web.config.Application;
-import per.web.config.SwaggerConfig;
 
 @WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
